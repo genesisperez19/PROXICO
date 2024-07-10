@@ -1,87 +1,51 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 15 13:07:54 2024
+# PRóxico
 
-Autor: Genesis N. Perez Gonzalez 
-Curso: COMP 4010-001
-Proyecto Final
+PRóxico (`proxico.py`) is an application designed to analyze and visualize data from the Toxics Release Inventory (TRI) Program for Puerto Rico (PR).
 
-"""
-PRóxico (proxico.py) es una aplicación diseñada para analizar y visualizar los datos 
-del Programa de Inventario de Emisiones Tóxicas (TRI) para Puerto Rico (PR). 
+## Features
 
-## Funcionalidades
+The primary goal of PRóxico is to allow users to explore toxic emissions data in Puerto Rico in a visual and interactive manner. Key features include:
 
-El objetivo principal de PRóxico es permitir al usuario explorar los 
-datos de emisiones tóxicas en Puerto Rico de una manera visual e interactiva. 
-Las principales características incluyen:
+- **Year Selection**: Users can select the year for which they want to view data.
+- **Physical Location**: Users are required to input their physical address (street, town, zipcode) to focus the visualization on their area of residence.
+- **Data Visualization**: The application presents charts and tables displaying relevant information on toxic emissions in Puerto Rico.
 
-- Selección de Año: El usuario puede seleccionar el año para el cual desea 
-                    visualizar los datos.
-                    
-- Ubicación Física: Se requiere la dirección física del usuario (calle, pueblo,
-                    zipcode) para enfocar la visualización en su área de 
-                    residencia.
-                    
-- Visualización de Datos: La aplicación presenta gráficos y tablas que muestran
-                          información relevante sobre las emisiones tóxicas en
-                          Puerto Rico.
+## Components
 
-## Componentes
+### Bubble Map
 
-Mapa de Burbujas
+- Displays factories by municipalities, focusing on the user's town of residence.
+- Shows the total pounds of toxic substance emissions in and outside the user's town.
+- Identifies whether the factory is under federal jurisdiction and its industrial sector.
+- Points and colors correspond to the total emissions in the town of residence.
 
-- Muestra las fábricas por municipios, centrándose en el pueblo de residencia 
-  del usuario.
-- Indica el total de libras de emisión de sustancias tóxicas en el pueblo de 
-  residencia y fuera de él.
-- Identifica si la fábrica es de jurisdicción federal y a qué sector industrial
-  pertenece.
-- Los puntos y colores corresponden al total de emisiones en el pueblo de 
-  residencia.
+### Pie Chart
 
-Gráfica Circular
+- Presents the total percentage of toxic substance emissions by emission category in the user's town of residence.
 
-- Presenta el porcentaje total de emisión de sustancias tóxicas por categoría 
-  de emisión en el pueblo de residencia del usuario.
+### Table
 
-Tabla
+- Details information about factories in the user's town of residence.
+- Indicates the type of chemical released, whether it is a metal or non-metal, whether it is carcinogenic, and its classification:
+  - TRI = General EPCRA Section 313 Chemical
+  - PBT = Persistent Bioaccumulative and Toxic
+  - DIOXIN = Dioxin or Dioxin-like compound.
+- Shows the amount of the chemical emitted.
 
-- Detalla información sobre las fábricas en el pueblo de residencia del usuario.
-- Indica el tipo de químico liberado, si es metal o no metal, si es carcinógeno 
-  o no, y su clasificación:
-                           TRI = General EPCRA Section 313 Chemical
-                           PBT = Persistent Bioaccumulative and Toxic
-                           DIOXIN = Dioxin or Dioxin-like compound.
-- Muestra la cantidad emitida de dicho químico.
+### Choropleth Map
 
-Mapa Coroplético
+- Displays the total toxic substance emissions in each municipality of Puerto Rico.
 
-- Muestra el total de emisiones de sustancias tóxicas en cada municipio de 
-  Puerto Rico.
+### Bar Chart
 
-Gráfico de Barras
+- Presents the top 5 factories in Puerto Rico with the highest total toxic substance emissions.
 
-- Presenta las 5 fábricas a nivel de isla con mayor total de emisión de 
-  sustancias tóxicas.
+## Future Enhancements
 
-## Mejoras Futuras
+- **Exact Location**: Consider the exact address of the user to obtain longitude and latitude, allowing for more specific visualization of nearby factories.
+- **Health Impact**: Evaluate how emissions of toxic substances could affect the health of nearby residents, considering their proximity to factories.
+- **Water Body Contamination**: Analyze if nearby water bodies are being contaminated by the released substances.
 
-- Localización Exacta: Considerar la dirección exacta del usuario para obtener 
-  la longitud y latitud, permitiendo una visualización más específica de las 
-  fábricas cercanas.
-  
-- Impacto en la Salud: Evaluar cómo las emisiones de sustancias tóxicas 
-  podrían afectar la salud de residentes cercanos, considerando su proximidad
-  a las fábricas.
+## Additional Notes
 
-- Contaminación de Cuerpos de Agua: Analizar si hay cuerpos de agua cercanos 
-  que puedan estar siendo contaminados por las sustancias liberadas.
-
-## Notas Adicionales
-
-Actualmente, la aplicación se enfoca en proporcionar información a nivel de 
-isla y sobre las fábricas que liberan sustancias tóxicas en el pueblo de 
-residencia del usuario. Se espera continuar mejorando y ampliando sus 
-funcionalidades en futuras versiones.
-
+Currently, the application focuses on providing island-wide information and details about factories that release toxic substances in the user's town of residence. Future versions are expected to continue improving and expanding its functionalities.
